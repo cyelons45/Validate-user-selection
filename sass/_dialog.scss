@@ -1,0 +1,75 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-black, 0.8);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &__dialog {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 75vw;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.25);
+    background-color: rgb(241, 234, 234);
+
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    border-radius: 3px;
+    opacity: 0;
+    transition: all 0.5s 0.2s;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 70vh;
+    }
+  }
+
+  &__yourselection {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__selected {
+    margin: 1px auto;
+    border: 2px solid $color-primary;
+    height: 100%;
+  }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__dialog {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-secondary;
+      font-size: 3rem;
+      text-decoration: none;
+      text-align: end;
+      margin-right: 2.5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        grid-column: 8/9;
+        grid-row: 1/2;
+      }
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

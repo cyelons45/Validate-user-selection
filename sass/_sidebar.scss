@@ -1,72 +1,71 @@
-.sidebar{
+.sidebar {
+  background-color: $color-blue-dark-1;
+  grid-column: sidebar-start/sidebar-end;
+  grid-row: 1/-1;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media only screen and (max-width: $bp-large) {
     background-color: $color-primary;
-    grid-column: sidebar-start/sidebar-end;
-    grid-row: 1/-1;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    @media only screen and (max-width:$bp-large) {
     grid-column: 1/-1;
-    grid-row: 1/2;
+    grid-row: 2/3;
     justify-content: flex-end;
-    align-items: center; 
-    }
- 
+    align-items: center;
+  }
 }
 
-.btn__box{
-    height: 5rem;
-    margin-top: 2rem;
-    cursor: pointer;
-    position: relative;
-    z-index: 100;
+.btn__box {
+  height: 5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
 
-    @media only screen and (max-width:$bp-large) {
-        margin-top: 0;
-        margin-right: 3rem;
-   
-   }
-
-
-
+  @media only screen and (max-width: $bp-large) {
+    height: 0;
+    margin-top: 0;
+  }
 }
 
+.nav-btn {
+  display: inline-block;
+  border: none;
+  border-radius: 0;
+  // margin-top: 4rem;
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem;
+  cursor: pointer;
 
-.nav-btn{
-    display: inline-block;
-    border: none;
-    border-radius: 0;
-    // margin-top: 4rem;
+  &::before,
+  &::after {
     background-color: #fff;
     height: 2px;
-    width : 4.5rem;
+    width: 4.5rem;
+    content: "";
+    display: block;
     cursor: pointer;
+  }
 
-   
+  &::before {
+    transform: translateY(-1.5rem);
+  }
+  &::after {
+    transform: translateY(1.3rem);
+  }
 
-    &::before,
-    &::after{      
-    background-color: #fff;
-        height: 2px;
-        width : 4.5rem;
-        content:"";
-        display: block;  
-        cursor: pointer;
-    
+  @media only screen and (max-width: $bp-large) {
+    height: 0;
+    width: 0;
+
+    &::before {
+      height: 0;
+      width: 0;
     }
-
-    &::before {transform: translateY(-1.5rem);}
-    &::after {transform: translateY(1.3rem);}
-
-    @media only screen and (max-width:$bp-large) {
-     margin-top: 2rem;
-     margin-right: 1rem;
-     
-    &::before {transform: translateY(-1.2rem);}
-    &::after {transform: translateY(1.0rem);}
-
-}
-
+    &::after {
+      transform: translateY(1rem);
+    }
+  }
 }

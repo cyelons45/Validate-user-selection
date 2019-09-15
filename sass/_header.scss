@@ -1,73 +1,40 @@
-.header{
-    background-color: $color-grey-dark-1;
-    grid-column: full-start / col-end 6;
-    background-image: linear-gradient(rgba($color-secondary,.93),rgba($color-secondary,.93)) ,url(../img/hero.jpeg);
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    grid-template-rows: 1fr min-content minmax(6rem, min-content)  1fr;
-    grid-template-columns: minmax(min-content,max-content);
-    grid-row-gap: 1.5rem;
-    padding: 8rem;
-    padding-top: 4rem;
+.header {
+  //   background-color: $color-grey-dark-1;
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.53),
+      rgba($color-green-light-2, 0.33)
+    ),
+    url(../img/bike-8.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 1.5rem;
+  padding: 8rem;
+  padding-top: 4rem;
+  justify-content: center;
+  // position: relative;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1/-1;
+    grid-row: 3/4;
     justify-content: center;
+    align-items: center;
+  }
 
-    @media only screen and (max-width:$bp-medium) {
-       grid-column: 1/-1;
-   
-    }
+  @media only screen and (max-width: $bp-medium) {
+    justify-content: center;
+    grid-column: 1/-1;
+  }
 
-    
-    @media only screen and (max-width:$bp-small) {
-        padding: 5rem;
-    
-     }
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem;
+  }
 
-   &__logo{
-    height: 3rem;
+  &__btn {
+    align-self: center;
     justify-self: center;
-    }
-
-    &__btn{
-        align-self: start;
-        justify-self: start;
-
-    }
-
-   &__seenon-text{
-       display: grid;
-       grid-template-columns: 1fr max-content 1fr;
-       grid-column-gap: 15px;
-       align-items: center;
-       font-size: 1.6rem;
-       color: $color-grey-dark-2;
-  
-
-       &::before,
-       &::after{
-           content: "";
-           display: block;
-           height: 1px;
-       
-           background-color:currentColor;
-        //   margin: 2rem;
-
-       }
-
-    }
-    &__seenon-logos{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-column-gap: 3rem;
-        justify-items: center;
-        align-items: center;
-
-        img{
-            max-height: 2.5rem;
-            max-width: 100%;
-            filter: brightness(70%)
-
-        }
-
-    }
+  }
 }

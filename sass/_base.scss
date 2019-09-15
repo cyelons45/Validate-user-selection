@@ -1,73 +1,90 @@
 // COLOR VARIABLES
-$color-primary: #c69963;
-$color-primary-dark: #B28451;
+$color-primary: #f2884e;
+$color-primary-dark: #ef681e;
 
 $color-secondary: #101d2c;
+$color-black: #080808;
 
-$color-grey-light-1: #f9f7f6;
-$color-grey-light-2: #aaa;
+$color-green-light-1: #bdf1ca;
+$color-green-light-2: #5bdd7b;
 
-$color-grey-dark-1: #54483A;
-$color-grey-dark-2: #6D5D4B;
+$color-blue-light-1: #c9f0ff;
+$color-blue-light-2: #a7e7ff;
+
+$color-blue-dark-1: #41cbff;
+$color-blue-dark-2: #009fda;
 
 // FONT VARIABLES
-$font-primary: 'Nunito', sans-serif;
-$font-display: 'Josefin Sans', sans-serif;
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
 
 //RESPONSIVE BREAKPOINTS
 
-$bp-largest:75em;    //1200px
-$bp-large:62.5em;    //1000px
-$bp-medium:50.0em;    //800px
-$bp-small:37.5em;    //600px
-
-
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
 
 *,
 *::before,
-*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-html{
-    box-sizing: border-box;
-    font-size: 62.5%; //10px/16px=62.5%-->1rem=10px
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px/16px=62.5%-->1rem=10px
 
-    @media only screen and (max-width:$bp-medium) {
-        font-size: 50%;
-    }
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
 
-    @media only screen and (max-width:$bp-small) {
-        font-size: 37.5%;
-    }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 37.5%;
+  }
 }
 
-body{
-    font-family: $font-primary;
-    color: $color-grey-dark-2;
-    font-weight: 300;
-    line-height: 1.6;
+body {
+  font-family: $font-primary;
+  color: $color-blue-dark-2;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
-.container{
-    display: grid;
-    grid-template-rows: 80vh min-content 40vw repeat(3,min-content);
-    grid-template-columns:[sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr)
-    [full-end] ;
+.container {
+  display: grid;
+  z-index: 1;
+  grid-template-rows: 8rem 80vh repeat(2, min-content);
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr)
+    [full-end];
 
-    @media only screen and (max-width:$bp-large) {
-        grid-template-rows: 6rem 80vh min-content 40vw repeat(3,min-content);
-        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr)
-        [full-end] ;
-    }
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: min-content 1rem 80vh repeat(2, min-content);
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end] minmax(6rem, 1fr)
+      [full-end];
+  }
 
-    
-    @media only screen and (max-width:$bp-medium) {
-        // grid-template-rows: 6rem 80vh min-content min-content 40vw repeat(3,min-content);
-        // grid-template-rows: 6rem calc(100vh - 6rem)  min-content  min-content  40vw  repeat(3, min-content);
-        grid-template-rows: 6rem calc(100vh - 6rem);
-   
-    }
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: minmax(8rem, max-content) 1rem 70vh repeat(
+        2,
+        min-content
+      );
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end] minmax(6rem, 1fr)
+      [full-end];
+  }
 }
