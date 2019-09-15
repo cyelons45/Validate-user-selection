@@ -31,6 +31,12 @@
     }
   }
 
+  &__attachment {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
   &__yourselection {
     text-align: center;
     font-size: 2rem;
@@ -38,9 +44,9 @@
   }
 
   &__selected {
-    margin: 1px auto;
     border: 2px solid $color-primary;
     height: 100%;
+    background-color: rgb(116, 76, 168);
   }
 
   &:target {
@@ -57,7 +63,7 @@
     &:link,
     &:visited {
       color: $color-secondary;
-      font-size: 3rem;
+      font-size: 5rem;
       text-decoration: none;
       text-align: end;
       margin-right: 2.5rem;

@@ -96,7 +96,8 @@ body {
   grid-column: sidebar-start / full-end;
   grid-row: 1 / 2;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); }
+  grid-template-columns: repeat(4, 1fr);
+  position: relative; }
   @media only screen and (max-width: 62.5em) {
     .navigation {
       grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
@@ -117,9 +118,20 @@ body {
     .nav {
       grid-column: 1 / -1;
       grid-gap: 1rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .nav {
+      display: flex;
+      flex-direction: column;
+      background-color: #f2884e;
+      width: 40rem;
+      position: absolute;
+      z-index: 2000;
+      top: 100%;
+      right: 20%;
+      display: none; } }
   .nav__link:link, .nav__link:visited {
-    font-size: 1.4rem;
-    color: #fff;
+    font-size: 1.6rem;
+    color: #f0e8e8;
     text-decoration: none;
     font-family: "Josefin Sans", sans-serif;
     text-transform: uppercase;
@@ -127,12 +139,37 @@ body {
     padding: 1.5rem;
     display: block;
     transition: all 0.2s; }
+    @media only screen and (max-width: 50em) {
+      .nav__link:link, .nav__link:visited {
+        font-size: 1.4rem; } }
     @media only screen and (max-width: 37.5em) {
       .nav__link:link, .nav__link:visited {
-        font-size: 1.2rem; } }
+        color: #fff;
+        font-size: 1.8rem;
+        width: 100%;
+        transition: none;
+        font-weight: 300;
+        border-bottom: 1px solid #d8d0d0; } }
   .nav__link:hover, .nav__link:active {
     background-color: rgba(255, 255, 255, 0.5);
     transform: translateY(-3px); }
+    @media only screen and (max-width: 37.5em) {
+      .nav__link:hover, .nav__link:active {
+        background-color: #f2884e;
+        transform: translateY(0); } }
+  .nav__icon-link {
+    position: absolute;
+    top: 5px;
+    right: 5%;
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 100;
+    display: none; }
+    @media only screen and (max-width: 37.5em) {
+      .nav__icon-link {
+        display: block; } }
+  .nav__active {
+    display: block; }
 
 .sidebar {
   background-color: #41cbff;
@@ -214,7 +251,8 @@ body {
       grid-column: 1/-1; } }
   @media only screen and (max-width: 37.5em) {
     .header {
-      padding: 5rem; } }
+      padding: 5rem;
+      position: relative; } }
   .header__btn {
     align-self: center;
     justify-self: center; }
@@ -267,11 +305,17 @@ body {
     z-index: 10;
     align-self: end;
     transform: translateY(50%); }
-  .bike__type {
+  .bike__price {
     font-size: 1.5rem;
     margin-left: 2rem;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: space-around; }
+  .bike__type {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    justify-content: space-around;
+    display: flex; }
     .bike__type svg {
       fill: #f2884e;
       height: 2rem;
@@ -330,14 +374,18 @@ body {
     @media only screen and (max-width: 50em) {
       .popup__dialog {
         height: 70vh; } }
+  .popup__attachment {
+    text-align: center;
+    display: flex;
+    justify-content: center; }
   .popup__yourselection {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem; }
   .popup__selected {
-    margin: 1px auto;
     border: 2px solid #f2884e;
-    height: 100%; }
+    height: 100%;
+    background-color: #744ca8; }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -346,7 +394,7 @@ body {
     transform: translate(-50%, -50%) scale(1); }
   .popup__close:link, .popup__close:visited {
     color: #101d2c;
-    font-size: 3rem;
+    font-size: 5rem;
     text-decoration: none;
     text-align: end;
     margin-right: 2.5rem; }

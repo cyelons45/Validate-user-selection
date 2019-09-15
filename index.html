@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
     <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png" /> -->
 
     <title>bike &mdash; rent a bike, nature</title>
@@ -43,6 +44,10 @@
           <a href="#" class="nav__link">CONTACT US</a>
         </li>
       </ul>
+
+      <a href="#" class="nav__icon-link"
+        ><i class="ion-navicon-round ion-close-round" id="menu_btn"></i
+      ></a>
     </div>
 
     <header class="header">
@@ -58,10 +63,13 @@
         </svg>
         <h5 class="bike__name">Adult Male Bike</h5>
         <div class="bike__type">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-expand"></use>
-          </svg>
-          <p>Bike</p>
+          <div class="bike__type-name">Type :</div>
+          <p class="bike__type-item">Bike</p>
+        </div>
+
+        <div class="bike__price">
+          <div class="bike__price-name">Price:</div>
+          <p class="bike__price-value">$20.50</p>
         </div>
 
         <!-- <div class="bike__rooms">
@@ -94,19 +102,16 @@
           <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
         <h5 class="bike__name">Adult Female Bike</h5>
+
         <div class="bike__type">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-expand"></use>
-          </svg>
-          <p>accessory</p>
+          <div class="bike__type-name">Type :</div>
+          <p class="bike__type-item">Accessory</p>
         </div>
 
-        <!-- <div class="bike__price">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-key"></use>
-          </svg>
-          <p>$2,750,000</p>
-        </div> -->
+        <div class="bike__price">
+          <div class="bike__price-name">Price:</div>
+          <p class="bike__price-value">$20.50</p>
+        </div>
 
         <a href="#popup" class="btn bike__btn">BOOK NOW</a>
       </div>
@@ -119,18 +124,14 @@
         <h5 class="bike__name">Kids Unisex Bike</h5>
 
         <div class="bike__type">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-expand"></use>
-          </svg>
-          <p>Bike</p>
+          <div class="bike__type-name">Type :</div>
+          <p class="bike__type-item">Bike</p>
         </div>
 
-        <!-- <div class="bike__price">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-key"></use>
-          </svg>
-          <p>$850,000</p>
-        </div> -->
+        <div class="bike__price">
+          <div class="bike__price-name">Price:</div>
+          <p class="bike__price-value">$15.5</p>
+        </div>
 
         <a href="#popup" class="btn bike__btn">BOOK NOW</a>
       </div>
@@ -141,19 +142,16 @@
           <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
         <h5 class="bike__name">Adult Unisex Helmet</h5>
+
         <div class="bike__type">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-expand"></use>
-          </svg>
-          <p>accessory</p>
+          <div class="bike__type-name">Type :</div>
+          <p class="bike__type-item">Accessory</p>
         </div>
 
-        <!-- <div class="bike__price">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-key"></use>
-          </svg>
-          <p>$1,950,000</p>
-        </div> -->
+        <div class="bike__price">
+          <div class="bike__price-name">Price:</div>
+          <p class="bike__price-value">$15.5</p>
+        </div>
 
         <a href="#popup" class="btn bike__btn">BOOK NOW</a>
       </div>
@@ -163,19 +161,16 @@
           <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
         <h5 class="bike__name">Kids Unisex Helmet</h5>
+
         <div class="bike__type">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-expand"></use>
-          </svg>
-          <p>Bike</p>
+          <div class="bike__type-name">Type :</div>
+          <p class="bike__type-item">Bike</p>
         </div>
-        <!-- 
+
         <div class="bike__price">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-key"></use>
-          </svg>
-          <p>$9,5000,000</p>
-        </div> -->
+          <div class="bike__price-name">Price:</div>
+          <p class="bike__price-value">$3.5</p>
+        </div>
 
         <a href="#popup" class="btn bike__btn">BOOK NOW</a>
       </div>
@@ -187,10 +182,13 @@
         </svg>
         <h5 class="bike__name">Insurance</h5>
         <div class="bike__type">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-expand"></use>
-          </svg>
-          <p>Bike</p>
+          <div class="bike__type-name">Type :</div>
+          <p class="bike__type-item">Bike</p>
+        </div>
+
+        <div class="bike__price">
+          <div class="bike__price-name">Price:</div>
+          <p class="bike__price-value">$9.99</p>
         </div>
 
         <a href="#popup" class="btn bike__btn">BOOK NOW</a>
@@ -206,7 +204,7 @@
     <div class="popup log " id="popup">
       <div class="popup__dialog log">
         <a href="#bikes" class="popup__close">&times;</a>
-        <div class="popup__yourselection">Selected Item, Validated !</div>
+        <div class="popup__yourselection"></div>
         <div class="popup__attachment"></div>
       </div>
     </div>

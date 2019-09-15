@@ -19,6 +19,10 @@
     width: 95%;
   }
 
+  // &__price-v {
+  //   margin-right: 10 rem;
+  // }
+
   &__img {
     width: 100%;
     grid-column: 1/-1;
@@ -57,12 +61,20 @@
   //   margin-top: 1.5rem;
   // }
 
-  &__type {
+  &__price {
     font-size: 1.5rem;
     margin-left: 2rem;
 
     display: flex;
     align-items: center;
+    justify-content: space-around;
+  }
+
+  &__type {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    justify-content: space-around;
+    display: flex;
 
     svg {
       fill: $color-primary;
