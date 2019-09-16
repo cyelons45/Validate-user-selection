@@ -341,10 +341,10 @@ body {
   font-size: 1.6rem; }
   @media only screen and (max-width: 50em) {
     .copyright {
-      font-size: 1.1rem; } }
+      font-size: 1.4rem; } }
   @media only screen and (max-width: 50em) {
     .copyright {
-      font-size: 0.8rem; } }
+      font-size: 1.2rem; } }
 
 .popup {
   height: 100vh;
